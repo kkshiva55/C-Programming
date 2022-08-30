@@ -24,7 +24,67 @@ Sample output: --> Enter the number: 6
 */
 
 
+#include <stdio.h>
 
+int main ()
+
+{
+
+    int row, col, num, dec, mid;      // Initialization of all required variables
+
+    printf("Enter the number: ");     // Getting input from the user
+
+    scanf("%d", &num);          // Storing input value at the address of variable 'num'
+
+    dec = num;
+
+    mid = (num / 2) + 1;    // Calculating middle value (For odd inputs)
+
+    for(row = 0; row < num; row++)         // Loop will be executed upto the given input
+
+    {
+
+          for(col = 0; col < num; col++)
+
+          {
+
+                 if(row == col)         // Printing incrementing diagonal elements
+
+                 {
+
+                    printf("%d", row + 1);
+
+                 }
+
+                else if ((col == num - row - 1) && (row == col != mid))     // Printing decrementing diagonal elements
+
+                {
+
+                     printf("%d", dec);
+
+                       
+                }
+
+
+                else         // Printing spaces
+
+                {
+
+                   printf(" ");
+
+                }
+
+          }
+
+            dec--;       // Decrementing the previous value
+
+            printf("\n");
+
+    }
+
+    return 0;
+
+}
 
 
 
