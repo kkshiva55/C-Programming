@@ -1,0 +1,59 @@
+/*
+
+Name: Shiva.K
+Date: 09-09-2022
+Description: LSB Steganography
+
+Sample output:
+
+emertxe@ubuntu:~$/C_Programs/Projects/Steganography$ gcc *.c
+
+<-------------Encoding------------->
+
+emertxe@ubuntu:~$/C_Programs/Projects/Steganography$ ./a.out -e beautiful.bmp secret.txt
+
+Selected encoding .....
+Read and validate encode arguments is a success
+Started Encoding .....
+Opened all the files Successfully
+width = 1024
+height = 768
+Encoding is possible with the given file
+Copied header successfully
+Magic String Encoded Successfully
+Successfully Encoded secret file extension size
+Successfully Encoded secret file extension
+Successfully Encoded secret file size
+Successfully Encoded secret file data :)
+Copied remaining bytes Successfully
+Encoding has been successfully Completed
+
+<-------------Decoding------------->
+
+emertxe@ubuntu:~$/C_Programs/Projects/Steganography$ ./a.out -d stego.bmp
+
+Selected decoding .....
+INFO: Arguments has been read and validated Successfully
+INFO: ## Decoding Procedure Started ##
+INFO: Opening required files
+INFO: Opened stegged file
+INFO: Decoding Magic String Signature
+INFO: Done
+INFO: Decoding Output File Extension
+INFO: Done
+INFO: Output File has been Created Successfully
+INFO: Decoded Secret File Extension Successfully
+INFO: Decoded Secret File Size Successfully
+INFO: Decoded Secret File Data Successfully
+INFO: ## Decoding Done Successfully ##
+
+<-----Error Message for invalid Arguments----->
+
+emertxe@ubuntu:~$/C_Programs/Projects/Steganography$ ./a.out -f
+
+Error: Invalid Operation Type
+Usage :
+Encoding : ./a.out -e beautiful.bmp secret.txt stego.bmp
+Decoding : ./a.out -d stego.bmp decode.txt
+
+*/
